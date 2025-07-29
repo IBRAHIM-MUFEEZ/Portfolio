@@ -1,0 +1,96 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #1abc9c;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* New style to center the contact info card */
+.contact-content-centered {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  margin-top: 40px;
+}
+
+.contact-info {
+  flex: 0 1 500px;
+  /* Allow card to grow but not exceed 500px */
+  background: #f8f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact-info h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #1abc9c;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-item i {
+  font-size: 1.2rem;
+  color: #1abc9c;
+  margin-right: 15px;
+  width: 24px;
+  text-align: center;
+}
+
+.info-item a {
+  color: #34495e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-item a:hover {
+  color: #1abc9c;
+}

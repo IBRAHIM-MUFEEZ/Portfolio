@@ -1,0 +1,155 @@
+.projects-section {
+  padding: 80px 20px;
+  background: #ecf0f1;
+  /* Light gray background for contrast */
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #1abc9c;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  /* FIX: Explicitly set solid color and remove gradient text */
+  color: #2c3e50;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.project-meta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-tech {
+  background: rgba(26, 188, 156, 0.15);
+  color: #1abc9c;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.project-description {
+  line-height: 1.8;
+  padding-left: 20px;
+  /* FIX: Explicitly set solid color and remove gradient text */
+  color: #34495e;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.project-description li {
+  margin-bottom: 10px;
+  /* FIX: Explicitly set solid color and remove gradient text */
+  color: #34495e;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.project-description li a {
+  color: #1abc9c;
+  font-weight: 500;
+  text-decoration: underline;
+  /* Ensure link color is not overridden */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.project-description li a:hover {
+  color: #16a085;
+}
+
+
+.view-paper-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #1abc9c;
+  color: #fff !important;
+  /* Important to override other styles */
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(22, 160, 133, 0.12);
+  transition: background 0.3s, transform 0.2s;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+.view-paper-button:hover {
+  background: #16a085;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .project-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
