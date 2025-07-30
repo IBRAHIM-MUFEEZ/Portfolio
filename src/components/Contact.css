@@ -36,17 +36,14 @@
   line-height: 1.6;
 }
 
-/* New style to center the contact info card */
 .contact-content-centered {
   display: flex;
   justify-content: center;
-  /* Center horizontally */
   margin-top: 40px;
 }
 
 .contact-info {
   flex: 0 1 500px;
-  /* Allow card to grow but not exceed 500px */
   background: #f8f9f9;
   padding: 30px;
   border-radius: 12px;

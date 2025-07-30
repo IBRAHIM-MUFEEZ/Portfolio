@@ -1,4 +1,11 @@
-/* FIX: Ensure the app fills the entire screen height */
+:root {
+  --tea-green: #ccd5ae;
+  --beige: #e9edc9;
+  --cornsilk: #fefae0;
+  --papaya-whip: #faedcd;
+  --buff: #d4a373;
+}
+
 html,
 body,
 #root {
@@ -11,21 +18,18 @@ body,
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--cornsilk);
 }
 
 .app-content {
   flex: 1;
 }
 
-/* --- Existing Styles --- */
-
 body {
   font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
-  background-color: #ecf0f1;
-  /* Light gray background */
+  background-color: var(--cornsilk);
   color: #34495e;
-  /* Dark gray text color */
   line-height: 1.6;
 }
 
@@ -40,14 +44,12 @@ h6 {
   font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   letter-spacing: 1px;
-  color: #2c3e50;
-  /* Dark slate blue */
+  color: var(--buff);
 }
 
 a {
   text-decoration: none;
-  color: #1abc9c;
-  /* Vibrant teal */
+  color: var(--buff);
 }
 
 ul {
@@ -68,11 +70,9 @@ li:hover {
   transform: scale(1.04);
 }
 
-/* Font Awesome icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
-/* Animation for all sections */
 section {
   padding: 60px 20px;
   animation: fadeIn 0.8s ease-in-out;
@@ -94,9 +94,8 @@ section {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   section {
-    padding: 40px 15px;
+    padding: 40px 16px;
   }
 }

@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const toRotate = [
+    "Frontend Developer",
+    "MERN Stack Trainee",
+    "Problem Solver",
+  ];
+
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+
+      setText(
+        isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section className="hero-section">
@@ -12,7 +47,8 @@ const Home = () => {
           Hi, I'm <span className="highlight">Mufeez</span>
         </h1>
         <h2 className="hero-subtitle">
-          Frontend Developer & MERN Stack Trainee
+          <span className="typewriter">{text}</span>
+          <span className="cursor">|</span>
         </h2>
         <p className="hero-description">
           I build responsive, interactive web applications with clean code and

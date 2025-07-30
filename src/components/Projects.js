@@ -62,22 +62,23 @@ const Projects = () => {
                     display: "inline-block",
                     marginTop: 12,
                     padding: "10px 22px",
-                    background:
-                      "linear-gradient(90deg, #1fa2ff 0%, #12d8fa 50%, #a6ffcb 100%)",
+                    backgroundColor: "var(--buff)",
                     color: "#fff",
                     borderRadius: 8,
                     fontWeight: 500,
                     textDecoration: "none",
                     fontSize: "1rem",
-                    boxShadow: "0 2px 8px rgba(30,144,255,0.12)",
-                    transition: "background 0.3s, transform 0.2s",
+                    boxShadow: "0 2px 8px rgba(212, 163, 115, 0.2)",
+                    transition: "background-color 0.3s, transform 0.2s",
                   }}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.05)")
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = "var(--tea-green)";
+                    e.currentTarget.style.transform = "scale(1.05)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = "var(--buff)";
+                    e.currentTarget.style.transform = "scale(1)";
+                  }}
                 >
                   View Paper
                 </a>
