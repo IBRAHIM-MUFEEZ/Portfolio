@@ -70,7 +70,13 @@ const Home = () => {
         </div>
       </div>
       <div className="hero-image">
-        <div className="animated-circle"></div>
+        <div className="animated-circle">
+          <img
+            src="/IMG_2314-PhotoRoom-modified.png"
+            alt="Mufeez Ibrahim"
+            className="profile-pic"
+          />
+        </div>
       </div>
     </section>
   );

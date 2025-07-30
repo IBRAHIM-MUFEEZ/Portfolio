@@ -11,20 +11,27 @@ const About = () => {
     },
     {
       id: 2,
-      degree: "B.Tech. (CSE)",
+      degree: "MBA (Master of Business Administration) in Finance Management",
+      institute: "Andhra University",
+      year: "Sept 2024 - Present",
+    },
+    {
+      id: 3,
+      degree:
+        "Bachelor of Technology (B.Tech.) in Computer Science and Engineering (Information Technology)",
       institute: "SRM Institute of Science and Technology",
       year: "2020 - 2024",
       gpa: "GPA: 8.46/10",
     },
     {
-      id: 3,
+      id: 4,
       degree: "Higher Secondary",
       institute: "Sri Chaitanya Junior College",
       year: "2018 - 2020",
       percentage: "90.6%",
     },
     {
-      id: 4,
+      id: 5,
       degree: "Secondary",
       institute: "Don Bosco's English Medium High School",
       year: "2017 - 2018",
