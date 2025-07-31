@@ -12,7 +12,7 @@ const Home = () => {
   const toRotate = [
     "Frontend Developer",
     "MERN Stack Trainee",
-    "Problem Solver",
+    "React Enthusiast",
   ];
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
       <div className="hero-image">
-        <div className="animated-circle"></div>
+        <img src="/Profile.jpg" alt="Profile" />
       </div>
     </section>
   );

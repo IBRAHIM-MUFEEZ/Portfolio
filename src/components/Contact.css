@@ -1,6 +1,6 @@
 .contact-section {
   padding: 80px 20px;
-  background-color: #ffffff;
+  background-color: var(--card-background);
 }
 
 .contact-container {
@@ -10,7 +10,7 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -24,7 +24,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: #1abc9c;
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
@@ -32,7 +32,7 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto 40px;
-  color: #7f8c8d;
+  color: var(--hero-description);
   line-height: 1.6;
 }
 
@@ -44,15 +44,15 @@
 
 .contact-info {
   flex: 0 1 500px;
-  background: #f8f9f9;
+  background: var(--background-color);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
 }
 
 .contact-info h3 {
   font-size: 1.5rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
@@ -65,7 +65,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background-color: #1abc9c;
+  background-color: var(--primary-color);
 }
 
 .info-item {
@@ -76,18 +76,18 @@
 
 .info-item i {
   font-size: 1.2rem;
-  color: #1abc9c;
+  color: var(--primary-color);
   margin-right: 15px;
   width: 24px;
   text-align: center;
 }
 
 .info-item a {
-  color: #34495e;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .info-item a:hover {
-  color: #1abc9c;
+  color: var(--primary-color);
 }

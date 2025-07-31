@@ -17,6 +17,15 @@ import "./App.css";
 const AppContent = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     setLoading(true);
@@ -29,7 +38,7 @@ const AppContent = () => {
 
   return (
     <div className="app-container">
-      <Header />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="app-content">
         {loading ? (
           <Loader />

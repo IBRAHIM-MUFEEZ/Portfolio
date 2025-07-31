@@ -54,31 +54,12 @@ const Projects = () => {
                 ))}
               </ul>
               {project.link && (
+                // Inline styles and JS hover events removed
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: "inline-block",
-                    marginTop: 12,
-                    padding: "10px 22px",
-                    backgroundColor: "var(--buff)",
-                    color: "#fff",
-                    borderRadius: 8,
-                    fontWeight: 500,
-                    textDecoration: "none",
-                    fontSize: "1rem",
-                    boxShadow: "0 2px 8px rgba(212, 163, 115, 0.2)",
-                    transition: "background-color 0.3s, transform 0.2s",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.backgroundColor = "var(--tea-green)";
-                    e.currentTarget.style.transform = "scale(1.05)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.backgroundColor = "var(--buff)";
-                    e.currentTarget.style.transform = "scale(1)";
-                  }}
+                  className="view-paper-button"
                 >
                   View Paper
                 </a>

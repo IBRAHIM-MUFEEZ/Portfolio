@@ -14,7 +14,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="skills-section" style={{ backgroundColor: "#f0f9ff" }}>
+    // The inline style has been removed from here
+    <section className="skills-section">
       <div className="skills-container">
         <h2 className="section-title">Technical Skills</h2>
         <div className="skills-list">

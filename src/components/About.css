@@ -1,6 +1,6 @@
 .about-section {
   padding: 80px 20px;
-  background-color: #ffffff;
+  background-color: var(--card-background);
 }
 
 .about-container {
@@ -17,7 +17,7 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 30px;
   position: relative;
 }
@@ -29,28 +29,28 @@
   left: 0;
   width: 80px;
   height: 4px;
-  background: #1abc9c;
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
 .about-text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #34495e;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .education-timeline {
   flex: 1;
-  background: #f8f9f9;
+  background: var(--background-color);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
 }
 
 .timeline-title {
   font-size: 1.8rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 30px;
   position: relative;
 }
@@ -62,7 +62,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: #1abc9c;
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
@@ -78,7 +78,7 @@
   left: 10px;
   height: 100%;
   width: 2px;
-  background-color: #1abc9c;
+  background-color: var(--primary-color);
 }
 
 .timeline-item {
@@ -93,15 +93,15 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #1abc9c;
-  border: 4px solid #ffffff;
+  background-color: var(--primary-color);
+  border: 4px solid var(--card-background);
 }
 
 .timeline-content {
-  background: #ffffff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s;
 }
 
@@ -111,34 +111,32 @@
 }
 
 .timeline-content h4 {
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 5px;
   font-size: 1.2rem;
 }
 
 .institute {
-  color: #1abc9c;
+  color: var(--primary-color);
   font-weight: 500;
   margin-bottom: 5px;
 }
 
 .year {
-  color: #7f8c8d;
+  color: var(--hero-description);
   font-size: 0.9rem;
   margin-bottom: 5px;
 }
 
 .details {
-  color: #34495e;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 @media (max-width: 992px) {
   .about-container {
     flex-direction: column;
-  }
-
-  .education-timeline {
-    width: 100%;
+    /* Stacks the 'About Me' and 'Education' sections */
+    gap: 30px;
   }
 }

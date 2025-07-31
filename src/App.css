@@ -1,9 +1,33 @@
 :root {
-  --tea-green: #ccd5ae;
-  --beige: #e9edc9;
-  --cornsilk: #fefae0;
-  --papaya-whip: #faedcd;
-  --buff: #d4a373;
+  --background-color: #fefae0;
+  --text-color: #34495e;
+  --header-background: #2c3e50;
+  --header-text-color: #ffffff;
+  --primary-color: #1abc9c;
+  --secondary-color: #d4a373;
+  --card-background: #ffffff;
+  --card-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.07);
+  --hero-bg: #eaf2f8;
+  --hero-title: #2c3e50;
+  --hero-subtitle: #34495e;
+  --hero-description: #7f8c8d;
+  --loader-bg: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background: #1a1a1a;
+  --header-text-color: #ffffff;
+  --primary-color: #1abc9c;
+  --secondary-color: #d4a373;
+  --card-background: #1e1e1e;
+  --card-shadow: 0 6px 32px 0 rgba(255, 255, 255, 0.07);
+  --hero-bg: #1a1a1a;
+  --hero-title: #ffffff;
+  --hero-subtitle: #bbbbbb;
+  --hero-description: #888888;
+  --loader-bg: rgba(0, 0, 0, 0.8);
 }
 
 html,
@@ -14,23 +38,24 @@ body,
   padding: 0;
 }
 
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .app-container {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--cornsilk);
+  background-color: var(--background-color);
 }
 
 .app-content {
   flex: 1;
-}
-
-body {
-  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
-  background-color: var(--cornsilk);
-  color: #34495e;
-  line-height: 1.6;
 }
 
 h1,
@@ -44,12 +69,12 @@ h6 {
   font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
   letter-spacing: 1px;
-  color: var(--buff);
+  color: var(--secondary-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--buff);
+  color: var(--secondary-color);
 }
 
 ul {
@@ -61,25 +86,22 @@ li {
   transition: background 0.2s, color 0.2s, transform 0.2s;
   border-radius: 8px;
   padding: 6px 12px;
-  color: #34495e;
+  color: var(--text-color);
 }
 
 li:hover {
-  background: #1abc9c;
+  background: var(--primary-color);
   color: #fff;
   transform: scale(1.04);
 }
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 section {
   padding: 60px 20px;
   animation: fadeIn 0.8s ease-in-out;
   border-radius: 18px;
-  box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: var(--card-shadow);
   margin-bottom: 32px;
-  background: #ffffff;
+  background: var(--card-background);
 }
 
 @keyframes fadeIn {
@@ -99,3 +121,6 @@ section {
     padding: 40px 16px;
   }
 }
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");

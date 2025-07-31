@@ -1,6 +1,6 @@
 .projects-section {
   padding: 80px 20px;
-  background: #ecf0f1;
+  background: var(--background-color);
 }
 
 .projects-container {
@@ -10,7 +10,7 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -26,7 +26,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: #1abc9c;
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
@@ -34,7 +34,7 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
-  color: #7f8c8d;
+  color: var(--hero-description);
   line-height: 1.6;
 }
 
@@ -45,18 +45,18 @@
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--card-background);
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   padding: 30px;
   transition: all 0.3s ease;
-  border: 1px solid #e0e0e0;
+  border: 1px solid transparent;
 }
 
 .project-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: var(--text-color);
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -72,7 +72,7 @@
 
 .project-tech {
   background: rgba(26, 188, 156, 0.15);
-  color: #1abc9c;
+  color: var(--primary-color);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -80,14 +80,14 @@
 }
 
 .project-date {
-  color: #7f8c8d;
+  color: var(--hero-description);
   font-size: 0.9rem;
 }
 
 .project-description {
   line-height: 1.8;
   padding-left: 20px;
-  color: #34495e;
+  color: var(--text-color);
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -96,7 +96,7 @@
 
 .project-description li {
   margin-bottom: 10px;
-  color: #34495e;
+  color: var(--text-color);
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -104,7 +104,7 @@
 }
 
 .project-description li a {
-  color: #1abc9c;
+  color: var(--primary-color);
   font-weight: 500;
   text-decoration: underline;
   background: none;
@@ -117,25 +117,25 @@
   color: #16a085;
 }
 
+/* Styling for the button moved here from the component */
 .view-paper-button {
   display: inline-block;
   margin-top: 12px;
   padding: 10px 22px;
-  background: #1abc9c;
+  background: var(--primary-color);
   color: #fff !important;
+  /* !important to override default link color */
   border-radius: 8px;
   font-weight: 500;
   text-decoration: none;
   font-size: 1rem;
   box-shadow: 0 2px 8px rgba(22, 160, 133, 0.12);
-  transition: background 0.3s, transform 0.2s;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .view-paper-button:hover {
   background: #16a085;
+  /* A slightly darker shade for hover */
   transform: scale(1.05);
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -46,6 +46,9 @@ const Header = () => {
           Contact
         </Link>
       </nav>
+      <button onClick={toggleTheme} className="theme-toggle">
+        {theme === "light" ? "🌙" : "☀️"}
+      </button>
     </header>
   );
 };
