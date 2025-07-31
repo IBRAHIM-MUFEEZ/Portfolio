@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Weather from "./Weather"; // Import the new Weather component
 import "./Home.css";
 
-const Home = () => {
+const Home = ({ theme }) => {
+  // Accept theme as a prop
   const navigate = useNavigate();
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -54,6 +56,10 @@ const Home = () => {
           I build responsive, interactive web applications with clean code and
           intuitive user interfaces.
         </p>
+
+        {/* Add the Weather component here */}
+        <Weather theme={theme} />
+
         <div className="hero-buttons">
           <button
             className="button primary"

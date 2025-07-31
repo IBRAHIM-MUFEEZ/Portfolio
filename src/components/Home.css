@@ -46,6 +46,8 @@
 .hero-buttons {
   display: flex;
   gap: 15px;
+  margin-top: 2rem;
+  /* This creates space above the buttons */
 }
 
 .button {

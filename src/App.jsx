@@ -17,7 +17,13 @@ import "./App.css";
 const AppContent = () => {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
-  const [theme, setTheme] = useState("light");
+
+  const [theme, setTheme] = useState(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    return prefersDark ? "dark" : "light";
+  });
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -25,13 +31,24 @@ const AppContent = () => {
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleThemeChange = (e) => {
+      setTheme(e.matches ? "dark" : "light");
+    };
+
+    mediaQuery.addEventListener("change", handleThemeChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleThemeChange);
+    };
   }, [theme]);
 
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); // Simulating a 0.5-second loading delay
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [location]);
@@ -44,7 +61,8 @@ const AppContent = () => {
           <Loader />
         ) : (
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* Pass the theme to the Home component */}
+            <Route path="/" element={<Home theme={theme} />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
