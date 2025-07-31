@@ -101,6 +101,10 @@ const Header = ({ theme, toggleTheme }) => {
             </>
           )}
         </div>
+        {/* A separate theme toggle for mobile view */}
+        <button onClick={toggleTheme} className="theme-toggle-mobile">
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
       </div>
 
       <nav className="nav-links-desktop">
@@ -122,7 +126,8 @@ const Header = ({ theme, toggleTheme }) => {
       </nav>
 
       <div className="navbar-right">
-        <button onClick={toggleTheme} className="theme-toggle">
+        {/* The original theme toggle for desktop view */}
+        <button onClick={toggleTheme} className="theme-toggle-desktop">
           {theme === "light" ? "🌙" : "☀️"}
         </button>
         <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
