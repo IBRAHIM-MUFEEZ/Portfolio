@@ -54,7 +54,6 @@ const Projects = () => {
                 ))}
               </ul>
               {project.link && (
-                // Inline styles and JS hover events removed
                 <a
                   href={project.link}
                   target="_blank"

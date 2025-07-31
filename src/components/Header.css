@@ -13,6 +13,12 @@
   transition: background-color 0.3s;
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: 500;
@@ -20,9 +26,32 @@
   transition: font-size 0.3s ease;
 }
 
-.nav-links {
+.weather-display {
   display: flex;
-  transition: all 0.3s ease;
+  align-items: center;
+  gap: 8px;
+}
+
+.weather-icon-header {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.location-name-header {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--header-text-color);
+}
+
+.temperature-header {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--header-text-color);
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
@@ -59,8 +88,22 @@
   left: 0;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
 .hamburger {
   display: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--header-text-color);
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -72,65 +115,33 @@
   transition: all 0.3s ease;
 }
 
-.bar.change:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+.nav-links-mobile {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px 0;
 }
 
-.bar.change:nth-child(2) {
-  opacity: 0;
-}
-
-.bar.change:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--header-text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-left: 15px;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    font-size: 1.1rem;
-    /* Smaller font size for the name on mobile */
-    order: 1;
-    /* Visual order for flex items */
+@media (max-width: 1100px) {
+  .weather-display {
+    display: none;
   }
+}
 
-  .theme-toggle {
-    order: 2;
-    /* Places the toggle right after the logo */
-    margin-left: 10px;
-    /* Adds a small space next to the name */
+@media (max-width: 900px) {
+  .nav-links-desktop {
+    display: none;
   }
 
   .hamburger {
     display: block;
-    order: 3;
-    /* Places the hamburger menu last */
-    margin-left: auto;
-    /* Pushes the hamburger to the far right */
   }
 
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    padding: 20px 0;
-    order: 4;
-    /* Ensures the nav links appear below when opened */
-  }
-
-  .nav-links.show {
+  .nav-links-mobile {
     display: flex;
   }
 
-  .nav-link {
-    margin: 10px 0;
-    text-align: center;
+  .logo {
+    font-size: 1.2rem;
   }
 }

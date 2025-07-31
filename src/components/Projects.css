@@ -117,14 +117,12 @@
   color: #16a085;
 }
 
-/* Styling for the button moved here from the component */
 .view-paper-button {
   display: inline-block;
   margin-top: 12px;
   padding: 10px 22px;
   background: var(--primary-color);
   color: #fff !important;
-  /* !important to override default link color */
   border-radius: 8px;
   font-weight: 500;
   text-decoration: none;
@@ -135,7 +133,6 @@
 
 .view-paper-button:hover {
   background: #16a085;
-  /* A slightly darker shade for hover */
   transform: scale(1.05);
 }
 
